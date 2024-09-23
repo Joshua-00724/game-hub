@@ -11,11 +11,8 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <Card>
-      <Image
-        objectFit="cover"
-        src={getCroppedImageUrl(game.background_image)}
-      ></Image>
+    <Card height="100%" display="flex" flexDirection="column">
+      <Image src={getCroppedImageUrl(game.background_image)}></Image>
       <CardBody>
         <HStack justifyContent="space-between" marginBottom={3}>
           <PlatformIconList
