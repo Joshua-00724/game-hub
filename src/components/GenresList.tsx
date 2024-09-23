@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import useGenres, { Genres } from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
-import GenresListSkeletons from "./GenresListSkeletons";
+//import GenresListSkeletons from "./GenresListSkeletons";
 
 interface Props {
   onSelectedGenre: (genre: Genres) => void;
@@ -29,10 +29,10 @@ const GenresList = ({ onSelectedGenre, selectedGenre }: Props) => {
         Genres
       </Heading>
       <List>
-        {isLoading &&
+        {/* {isLoading &&
           skeletonGenres.map((skeletonGenre) => (
             <GenresListSkeletons key={skeletonGenre} />
-          ))}
+          ))} */}
 
         {data.map((genre) => (
           <ListItem key={genre.id} paddingY="5px">
