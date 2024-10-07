@@ -5,6 +5,7 @@ import useGames from "../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardContainer from "./GameCardContainer";
 import GameCardSkeletons from "./GameCardSkeletons";
+import platforms from "../data/platforms";
 
 const GameGrid = () => {
   const {

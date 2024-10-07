@@ -4,12 +4,17 @@ import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../services/image-url";
 import Emojis from "./Emojis";
+import { Link, useNavigate } from "react-router-dom";
+import { Platform } from "../hooks/usePlatforms";
 
 interface Props {
   game: Game;
 }
 
 const GameCard = ({ game }: Props) => {
+  // const navigate = useNavigate();
+  // const selectedGame = () => navigate(`/games/${platform.slug}`);
+
   return (
     <Card height="100%" display="flex" flexDirection="column">
       <Image src={getCroppedImageUrl(game.background_image)}></Image>
@@ -21,7 +26,7 @@ const GameCard = ({ game }: Props) => {
           <CriticScore score={game.metacritic}></CriticScore>
         </HStack>
         <Heading fontSize="2xl">
-          {game.name}
+          <Link to={"/games/" + game.slug}>{game.name}</Link>
           <Emojis rating={game.rating_top} />
         </Heading>
       </CardBody>
