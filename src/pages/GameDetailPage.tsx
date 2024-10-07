@@ -2,6 +2,7 @@ import { Button, Heading, HStack, Spinner, Text } from "@chakra-ui/react";
 import useGames from "../hooks/useGames";
 import { useParams } from "react-router-dom";
 import useGame from "../hooks/useGame";
+import ExpandableText from "../components/ExpandableText";
 
 const GameDetailPage = () => {
   const { slug } = useParams();
@@ -15,7 +16,7 @@ const GameDetailPage = () => {
         {game.name}
       </Heading>
 
-      <Text>{game.description_raw}</Text>
+      <ExpandableText>{game.description_raw}</ExpandableText>
       {/* <Button>Load More</Button> */}
     </>
   );
