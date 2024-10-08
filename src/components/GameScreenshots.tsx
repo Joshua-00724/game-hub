@@ -3,10 +3,10 @@ import React from "react";
 import useScreenshots from "../hooks/useScreenshots";
 
 interface Props {
-  gamePk: number;
+  gameId: number;
 }
-const Screenshots = ({ gamePk }: Props) => {
-  const { data, isLoading, error } = useScreenshots(gamePk);
+const Screenshots = ({ gameId }: Props) => {
+  const { data, isLoading, error } = useScreenshots(gameId);
 
   if (isLoading) return null;
 
